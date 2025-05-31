@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial;
+  background-image: linear-gradient(135deg, #001341, #000000);
+  min-height: 100vh;
+  padding: 40px 0px;
+}
+/* -------------------------------------------- */
+.image {
+  width: 500px;
+  max-width: 95%;
+  margin: 0px auto 40px;
+  animation: moveUpDown 5s ease-in-out alternate infinite;
+}
+.image img {
+  width: 100%;
+  max-width: 100%;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* move 20px up */
+  }
+}
+/* -------------------------------------------- */
+.text-landing {
+  color: white;
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 32px;
+  font-family: cursive;
+}
+.text-landing span {
+  color: #ffc107;
+  text-shadow: 0px 0px 5px #03a9f4;
+}
+/* -------------------------------------------- */
+/* start button */
+.btn {
+  width: fit-content;
+  margin: 20px auto;
+  display: block;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 15px 40px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px 0px 10px #0ac1e1;
+}
+.btn .original {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition-duration: 0.3s;
+  inset: 0;
+}
+.btn:hover .original {
+  transform: translateY(100%);
+}
+.btn .letters {
+  display: flex;
+  color: #fff;
+}
+.btn span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition-duration: 0.3s;
+}
+
+.btn span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
+/* -------------------------------------------- */
